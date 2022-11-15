@@ -341,7 +341,7 @@
           <div class="col-lg-6 ms-auto mt-5 mt-lg-0 wow fadeInUp" data-wow-delay="0.3s">
             <h2 class="text-10 fw-600 text-center text-lg-start mb-5">Wil je een offerte ontvangen?</h2>
             <!-- Contact Form -->
-            <form id="contact-form" class="form-border" method="post">
+            <form id="contact-form" class="form-border" action="php/mail.php" method="post">
               <div class="row g-4">
                 <div class="col-12">
                   <label class="form-label" for="name">Je naam:</label>
@@ -352,7 +352,7 @@
                   <input id="email" name="email" type="email" class="form-control py-1" required >
                 </div>
                 <div class="col-12">
-                  <label class="form-label" for="form-message">Specifieke informatie:</label>
+                  <label class="form-label" for="form-message">Productie informatie:</label>
                   <textarea id="form-message" name="form-message" class="form-control py-1" rows="4" required ></textarea>
                 </div>
                 <div class="col-12 text-center text-lg-start">
