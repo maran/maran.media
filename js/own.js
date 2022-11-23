@@ -26,3 +26,27 @@ function calculatePrice(){
         price_total.innerHTML = total
     }
 }
+
+var wavesurfer = WaveSurfer.create({
+    container: '#voice-demo',
+    mediaControls: true,
+    progressColor: '#f5df4e'
+});
+
+wavesurfer.load("../data/Maran_Demo_2022.mp3")
+
+var playButton = document.getElementById("play-button")
+var buttonTextSpan = document.getElementById("button-text")
+var originalText = buttonTextSpan.innerHTML
+
+playButton.onclick = function(){
+    if(playButton.hasAttribute("data-playing")){
+        buttonTextSpan.innerHTML = originalText
+        playButton.removeAttribute("data-playing")
+        wavesurfer.pause()
+    }else{
+        buttonTextSpan.innerHTML = "Pauzeer demo"
+        playButton.setAttribute("data-playing", "true")
+        wavesurfer.play()
+    }
+}
