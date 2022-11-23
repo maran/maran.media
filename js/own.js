@@ -1,10 +1,10 @@
 function calculatePrice(){
-    var base_price = 250
+    var base_price = 150
     var words_per_price = 250
-    var price_per_words = 50
+    var price_per_words = 30
     let words  = document.querySelector("#word_count")
     let word_count = words.value
-    let extra_words = (word_count - 250)
+    let extra_words = (word_count - words_per_price)
     let words_left = extra_words
     let total = base_price
 
